@@ -47,7 +47,7 @@ public class AccountsApiController implements AccountsApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                log.info("Request POST enrollmentAcount: " + body.getEnrollmentId()+" "+ body.getDebtorAccount().toString());
+                log.info("Request POST enrollmentAcount: " + body.getClientId()+" "+ body.getDebtorAccount().toString());
             	return new ResponseEntity<EnrollmentResponse>(objectMapper.readValue("{  \"enrollmentId\" : \"507123177121861279943901\",  \"operationDate\" : \"1995-09-07T10:40:52Z\",  \"description\" : \"Accounts enrollment created\"}", EnrollmentResponse.class), HttpStatus.CREATED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);

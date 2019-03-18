@@ -18,14 +18,14 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-18T14:06:57.619Z")
 
 public class EnrollmentRequest   {
-  @JsonProperty("enrollmentId")
-  private String enrollmentId = null;
+  @JsonProperty("clientId")
+  private String clientId = null;
 
   @JsonProperty("debtorAccount")
   private DebtorAccount debtorAccount = null;
 
-  public EnrollmentRequest enrollmentId(String enrollmentId) {
-    this.enrollmentId = enrollmentId;
+  public EnrollmentRequest clientId(String clientId) {
+    this.clientId = clientId;
     return this;
   }
 
@@ -37,12 +37,12 @@ public class EnrollmentRequest   {
   @NotNull
 
 @Pattern(regexp="^\\d{24}$") @Size(min=24,max=24) 
-  public String getEnrollmentId() {
-    return enrollmentId;
+  public String getClientId() {
+    return clientId;
   }
 
-  public void setEnrollmentId(String enrollmentId) {
-    this.enrollmentId = enrollmentId;
+  public void setClientId(String clientId) {
+    this.clientId = clientId;
   }
 
   public EnrollmentRequest debtorAccount(DebtorAccount debtorAccount) {
@@ -77,13 +77,13 @@ public class EnrollmentRequest   {
       return false;
     }
     EnrollmentRequest enrollmentRequest = (EnrollmentRequest) o;
-    return Objects.equals(this.enrollmentId, enrollmentRequest.enrollmentId) &&
+    return Objects.equals(this.clientId, enrollmentRequest.clientId) &&
         Objects.equals(this.debtorAccount, enrollmentRequest.debtorAccount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(enrollmentId, debtorAccount);
+    return Objects.hash(clientId, debtorAccount);
   }
 
   @Override
@@ -91,7 +91,7 @@ public class EnrollmentRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnrollmentRequest {\n");
     
-    sb.append("    enrollmentId: ").append(toIndentedString(enrollmentId)).append("\n");
+    sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    debtorAccount: ").append(toIndentedString(debtorAccount)).append("\n");
     sb.append("}");
     return sb.toString();

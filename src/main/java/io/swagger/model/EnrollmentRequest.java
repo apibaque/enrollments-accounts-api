@@ -36,7 +36,7 @@ public class EnrollmentRequest   {
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
-@Pattern(regexp="^\\d{24}$") @Size(min=24,max=24) 
+@Pattern(regexp="^\\w{24}$") @Size(min=24,max=24) 
   public String getClientId() {
     return clientId;
   }

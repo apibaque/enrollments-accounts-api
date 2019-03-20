@@ -1,27 +1,31 @@
 package io.swagger.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.springframework.validation.annotation.Validated;
+
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.springframework.validation.annotation.Validated;
+import org.threeten.bp.OffsetDateTime;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CreditorAccount
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-18T14:06:57.619Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-03-15T18:16:36.622Z")
 
 public class CreditorAccount   {
   @JsonProperty("identification")
   private String identification = null;
 
-  @JsonProperty("secundaryIdentification")
-  private String secundaryIdentification = null;
+  @JsonProperty("secondaryIdentification")
+  private String secondaryIdentification = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -53,25 +57,25 @@ public class CreditorAccount   {
     this.identification = identification;
   }
 
-  public CreditorAccount secundaryIdentification(String secundaryIdentification) {
-    this.secundaryIdentification = secundaryIdentification;
+  public CreditorAccount secondaryIdentification(String secondaryIdentification) {
+    this.secondaryIdentification = secondaryIdentification;
     return this;
   }
 
   /**
-   * Get secundaryIdentification
-   * @return secundaryIdentification
+   * Get secondaryIdentification
+   * @return secondaryIdentification
   **/
   @ApiModelProperty(example = "00100", required = true, value = "")
   @NotNull
 
 @Pattern(regexp="^\\d{5}$") @Size(min=5,max=5) 
-  public String getSecundaryIdentification() {
-    return secundaryIdentification;
+  public String getSecondaryIdentification() {
+    return secondaryIdentification;
   }
 
-  public void setSecundaryIdentification(String secundaryIdentification) {
-    this.secundaryIdentification = secundaryIdentification;
+  public void setSecondaryIdentification(String secondaryIdentification) {
+    this.secondaryIdentification = secondaryIdentification;
   }
 
   public CreditorAccount name(String name) {
@@ -148,7 +152,7 @@ public class CreditorAccount   {
     }
     CreditorAccount creditorAccount = (CreditorAccount) o;
     return Objects.equals(this.identification, creditorAccount.identification) &&
-        Objects.equals(this.secundaryIdentification, creditorAccount.secundaryIdentification) &&
+        Objects.equals(this.secondaryIdentification, creditorAccount.secondaryIdentification) &&
         Objects.equals(this.name, creditorAccount.name) &&
         Objects.equals(this.destinationDNI, creditorAccount.destinationDNI) &&
         Objects.equals(this.validThru, creditorAccount.validThru);
@@ -156,7 +160,7 @@ public class CreditorAccount   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(identification, secundaryIdentification, name, destinationDNI, validThru);
+    return Objects.hash(identification, secondaryIdentification, name, destinationDNI, validThru);
   }
 
   @Override
@@ -165,7 +169,7 @@ public class CreditorAccount   {
     sb.append("class CreditorAccount {\n");
     
     sb.append("    identification: ").append(toIndentedString(identification)).append("\n");
-    sb.append("    secundaryIdentification: ").append(toIndentedString(secundaryIdentification)).append("\n");
+    sb.append("    secondaryIdentification: ").append(toIndentedString(secondaryIdentification)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    destinationDNI: ").append(toIndentedString(destinationDNI)).append("\n");
     sb.append("    validThru: ").append(toIndentedString(validThru)).append("\n");

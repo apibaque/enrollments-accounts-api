@@ -1,16 +1,17 @@
 package io.swagger.model;
 
-import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.ErrorErrorDetails;
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
+import java.util.Objects;
+
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * The HTTP status code (&#x60;&#x60;&#x60;httpStatus&#x60;&#x60;&#x60;) is the main classifier. A DNB-specific &#x60;&#x60;&#x60;errorNumber&#x60;&#x60;&#x60;is also provided as a lookup reference.   The &#x60;&#x60;&#x60;errorDocumentation&#x60;&#x60;&#x60; is a URI to further information about the endpoint, with uesful infomration about correct usage.  The &#x60;&#x60;&#x60;errorDetails&#x60;&#x60;&#x60;is specific information about the one or more errors that have occurred.  **Note:** We strive to offer the best possible information about all errors. This depends on the information offered by the backend systems, and in some cases there is limited information available from the underlying solutions. In these cases, the errors may contain empty fields, and/or information that is difficult to interpret.  Example &#x60;&#x60;&#x60;error&#x60;&#x60;&#x60; (TODO: Work in progress: May need an update): &#x60;&#x60;&#x60; {   \&quot;errorDocumentation\&quot;: \&quot;https://developer.dnb.no/something-useful-goes-here/\&quot;,   \&quot;errorDetails\&quot;: [     {       \&quot;errorNumber\&quot;: \&quot;123450\&quot;,       \&quot;errorField\&quot;: \&quot;accountNumber\&quot;,       \&quot;errorDescription\&quot;: \&quot;accountNumber must be digits only\&quot;     },     {       \&quot;errorNumber\&quot;: \&quot;123451\&quot;,       \&quot;errorField\&quot;: \&quot;dateFrom\&quot;,       \&quot;errorDescription\&quot;: \&quot;dateFrom must be in ISO8601 date format\&quot;     }   ] } &#x60;&#x60;&#x60;

@@ -24,7 +24,7 @@ public class CreditorAccount   {
   @JsonProperty("identification")
   private String identification = null;
 
-  @JsonProperty("secondaryIdentification")
+  @JsonProperty("secundaryIdentification")
   private String secondaryIdentification = null;
 
   @JsonProperty("name")

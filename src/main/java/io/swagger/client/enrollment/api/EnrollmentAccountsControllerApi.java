@@ -13,9 +13,14 @@
 
 package io.swagger.client.enrollment.api;
 
-import com.google.gson.reflect.TypeToken;
-
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.google.gson.reflect.TypeToken;
 
 import io.swagger.client.enrollment.ApiCallback;
 import io.swagger.client.enrollment.ApiClient;
@@ -27,12 +32,6 @@ import io.swagger.client.enrollment.ProgressRequestBody;
 import io.swagger.client.enrollment.ProgressResponseBody;
 import io.swagger.client.enrollment.model.EnrollmentAccountsDto;
 import io.swagger.client.enrollment.model.EnrollmentAccountsResponseDto;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class EnrollmentAccountsControllerApi {
     private ApiClient apiClient;

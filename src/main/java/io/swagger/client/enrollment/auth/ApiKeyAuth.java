@@ -13,11 +13,10 @@
 
 package io.swagger.client.enrollment.auth;
 
+import java.util.List;
 import java.util.Map;
 
 import io.swagger.client.enrollment.Pair;
-
-import java.util.List;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-20T15:46:11.567Z")
 public class ApiKeyAuth implements Authentication {

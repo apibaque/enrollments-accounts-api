@@ -13,11 +13,10 @@
 
 package io.swagger.client.enrollment.auth;
 
+import java.util.List;
 import java.util.Map;
 
 import io.swagger.client.enrollment.Pair;
-
-import java.util.List;
 
 public interface Authentication {
     /**
